@@ -16,7 +16,7 @@
     <div class="row">
         <div class="col-12">
             <div class="table-responsive">
-                <table class="table table-striped" id="tabla">
+            <table class="table table-secondary table-striped">
                     <thead>
                         <tr>
                             <th scope="col"> </th>

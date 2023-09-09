@@ -1,0 +1,86 @@
+body{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color:rgb(238, 206, 146);
+}
+a{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+input.form-control{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+i{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+span{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+a.navbar-brand{
+    padding-left: 10px;
+}
+img.align-text-top{
+padding-left:10px;
+}
+form.form-inline{
+    padding-right: 35px;
+}
+nav{
+    text-align: center;
+    box-shadow: 0px 6px 5px rgba(39, 63, 100, 0.39);
+}
+input{
+    box-shadow: 0px 4px 5px rgba(39, 63, 100, 0.39);
+}
+#contenido{
+    background-color:rgb(248, 239, 223);
+    margin-top:20px;
+    border-left: 20px;
+    border-radius: 20px;
+    margin-bottom: 50px;
+    box-shadow: 0px 6px 5px rgba(39, 63, 100, 0.39);
+}
+.card-header{
+    background-color: rgb(26, 25, 25);
+    color:white;
+}
+.card-footer{
+    background-color: rgb(26, 25, 25);
+}
+.card{
+    color:rgb(31, 45, 63);
+    border-radius:20px;
+    background-color: rgb(223, 219, 200);
+    box-shadow: 0px 6px 5px rgba(39, 63, 100, 0.39);
+    margin-bottom:50px;
+}
+select{
+    margin-left: 5px;
+    border-radius: 20px;
+    background-color: rgb(245, 230, 202);
+}
+#imagen{
+    border-radius: 10px;
+    background-color: rgb(238, 233, 226);
+}
+.list-group-item{
+    color:rgb(247, 248, 250);
+    background-color: rgb(170, 158, 138);
+}
+.card-img-top{
+    border-radius: 20px;
+}
+#fecha{
+    border-radius:20px;
+}
+#imagenperfil{
+    box-shadow: 0px 6px 5px rgba(39, 63, 100, 0.39);
+}
+#carousel{
+    color:rgb(245, 247, 252);
+    text-shadow: 0 0 5px rgba(24, 41, 66, 0.774);
+}
+#landing{
+    margin-top:20px;
+    background-color:rgb(248, 239, 223);
+    border-radius: 50px;
+    margin-bottom: 20px;
+}

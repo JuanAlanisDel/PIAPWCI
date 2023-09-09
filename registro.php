@@ -89,6 +89,7 @@ if($_POST){
   <!-- Bootstrap CSS v5.2.1 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link href="css/general.css" rel="stylesheet">
     <script href="js/registro.js"></script>
 </head>
 
@@ -114,7 +115,7 @@ if($_POST){
         Nombre completo:<input type="text" required class="form-control" name="nombre" id="">
          <br/>
          Fecha de nacimiento:
-         <input type="date" name="fecha" id="">
+         <input type="date" name="fecha" id="fecha">
          <br/>
          <br/>
          Rol:

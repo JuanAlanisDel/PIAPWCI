@@ -1,10 +1,8 @@
 <?php include("header.php");
 ?>
-<div class="p-5 bg-light">
-    <div class="container">
         <div class="row">
         <div class="col-md-6">
-<img width=400 height=400 class="rounded float-start" src="imagenes/<?php echo $_SESSION["imagen"]; ?>" alt="">
+<img id="imagenperfil" width=400 height=400 class="rounded float-start" src="imagenes/<?php echo $_SESSION["imagen"]; ?>" alt="">
         </div>
         <div class="col-md-3">
         <p class="h6">Usuario</p>
@@ -30,8 +28,6 @@
     <p class="h3"><?php print_r($_SESSION["rol"]); ?></p>
     <br>
         </div>
-</div>
     </div>
-</div>
 </div>
 <?php include("footer.php");?>

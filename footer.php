@@ -16,7 +16,9 @@
   <!-- Copyright -->
   <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
     © 2023 Copyright:
-    <a class="text-white" href="index.php">TienditaOnline</a>
+    <a class="text-white" href="index.php">Present</a>
+    Juan Gerardo Alanís Delgado
+    
   </div>
   <!-- Copyright -->
 </footer>

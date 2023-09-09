@@ -39,39 +39,39 @@ if($_POST){
         <br/>
             <div class="card">
                 <div class="card-header">
-                    Publicación de Productos
+                <b>Publicación de Productos</b>
                 </div>
                 <div class="card-body">
-                <form method="post" action="productos.php" enctype="multipart/form-data">
-                Nombre del producto:<input type="text" required class="form-control" name="nomprod" id="">
+                <form method="post" action="productos.php" enctype="multipart/form-data"><b>
+                Nombre del producto</b><input type="text" required class="form-control" name="nomprod" id="">
          <br/>
-                Descripción:<input type="text" required class="form-control" name="descripcion" id="">
+                <b>Descripción</b><input type="text" required class="form-control" name="descripcion" id="">
          <br/>
-            Categoría (mínimo una):<input type="text" required class="form-control" name="categoria" id="">
+            <b>Categoría (mínimo una)</b><input type="text" required class="form-control" name="categoria" id="">
         <div class="row">
             <div class="col-md-6">
             <br/>
-        Cantidad disponible:<input type="text" required class="form-control" name="cantdis" id="">
+        <b>Cantidad disponible</b><input type="text" required class="form-control" name="cantdis" id="">
         <br/>
-         Visibilidad: 
-         <select name="vision" id="">
+         <b>Visibilidad:</b> 
+         <select name="vision" id="vision">
             <option value="Venta"<?php echo ($vision=="Venta")?"selected":"";?>>Venta</option>
             <option value="Cotización"<?php echo ($vision=="Cotización")?"selected":"";?>>Cotización</option>
         </select>
         <br/>
         <br/>
-        Imagen 1: <br><input type="file" name="imagen1" id="">
+        <b>Imagen 1</b> <br><input type="file" name="imagen1" id="imagen">
          <br/>
-         Imagen 2: <br><input type="file" name="imagen2" id="">
+         <b>Imagen 2</b> <br><input type="file" name="imagen2" id="imagen">
          <br/>
         </div>
         <div class="col-md-6">
         <br/>
-         Precio (venta):<input type="text" required class="form-control" name="precio" id="">
+         <b>Precio (venta)</b><input type="text" required class="form-control" name="precio" id="">
         <br/>
-        Video: <br><input type="file" name="video" id="">
+        <b>Video</b> <br><input type="file" name="video" id="imagen">
         <br/>
-        Imagen 3: <br><input type="file" name="imagen3" id="">
+        <b>Imagen 3</b> <br><input type="file" name="imagen3" id="imagen">
          <br/>
         </div>
         </div>

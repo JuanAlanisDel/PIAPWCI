@@ -19,18 +19,18 @@ if($_POST){
         <br/>
             <div class="card">
                 <div class="card-header">
-                    Creación de Listas
+                <b>Creación de Listas</b>
                 </div>
                 <div class="card-body">
-                <form method="post" action="lista.php" enctype="multipart/form-data">
-                Nombre de la lista:<input type="text" required class="form-control" name="nomlista" id="">
+                <form method="post" action="lista.php" enctype="multipart/form-data"><b>
+                Nombre de la lista</b><input type="text" required class="form-control" name="nomlista" id="">
          <br/>
-                Descripción:<input type="text" required class="form-control" name="descripcion" id="">
+                <b>Descripción</b><input type="text" required class="form-control" name="descripcion" id="">
         <div class="row">
             <div class="col-md-6">
         <br/>
-        <br/>
-         Visibilidad: 
+        <br/><b>
+         Visibilidad: </b>
          <select name="vision" id="">
             <option value="Pública">Pública</option>
             <option value="Privada">Privada</option>
@@ -39,8 +39,8 @@ if($_POST){
          <br/>
         </div>
         <div class="col-md-6">
-        <br/>
-        Imagen (opcional): <br><input type="file" name="imagenopc" id="">
+        <br/><b>
+        Imagen (opcional)</b><br><input type="file" name="imagenopc" id="imagen">
         </div>
         </div>
          <br/>

@@ -30,6 +30,9 @@ session_start();
                 <li class="nav-item active">
                     <a class="nav-link" href="carritocompras.php">Carrito</a>
                 </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="">Consultas</a>
+                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="perfil.php">Dummy</a>
                 </li>

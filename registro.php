@@ -14,7 +14,7 @@ if($_POST){
     $rol = (isset($_POST['rol']))?$_POST['rol']:"";
     $sexo = (isset($_POST['sexo']))?$_POST['sexo']:"";
     if($emailesp>=1){
-        if($nombre>=3){
+        if($nombre>=2){
             if(strlen($_POST['usuario'])>=3){
                 if($connum>=1){
                     if($conmayus>=1){
@@ -22,7 +22,8 @@ if($_POST){
                             if($conesp>=1){
                                 if(strlen($_POST['contra'])>=8){
                                     if ($fecha_actual > $fecha_recibida) {
-                                        $imagen= $_FILES['foto']['name'];
+                                        if(($_FILES['foto']['name']!="")){
+                                            $imagen= $_FILES['foto']['name'];
                                         move_uploaded_file($_FILES['foto']['tmp_name'],"imagenes/".$imagen);
                                         $_SESSION['usuario']=$_POST['usuario'];
                                         $_SESSION['imagen']=$imagen;
@@ -33,6 +34,10 @@ if($_POST){
                                         $_SESSION['nacim']=$_POST['fecha'];
                                         echo '<script language="javascript">alert("Usuario registrado en la base de datos.");</script>';
                                         header("location:index.php");
+                                        }
+                                        else{
+                                            echo '<script language="javascript">alert("La foto de perfil está sin adjuntar. Por favor, añada una.");</script>';
+                                        }
                                     }
                                     else{
                                         echo '<script language="javascript">alert("La fecha de nacimiento necesita ser antes de la actual. Por favor, ingrese una correcta.");</script>';
@@ -63,7 +68,7 @@ if($_POST){
             }
         }
         else{
-            echo '<script language="javascript">alert("El nombre completo no tiene espacios. Por favor, ingrese uno correcto.");</script>';
+            echo '<script language="javascript">alert("El nombre completo no es válido. Por favor, ingrese uno correcto.");</script>';
         }
     }
     else{
@@ -76,7 +81,7 @@ if($_POST){
 <html lang="en">
 
 <head>
-  <title>Title</title>
+  <title>Registro de usuario</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">

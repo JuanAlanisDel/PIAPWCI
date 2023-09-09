@@ -24,6 +24,9 @@ session_start();
                 <li class="nav-item">
                     <a class="nav-link" href="productos.php">Productos</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="lista.php">Listas</a>
+                </li>
                 <li class="nav-item active">
                     <a class="nav-link" href="carritocompras.php">Carrito</a>
                 </li>

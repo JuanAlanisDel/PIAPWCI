@@ -1,4 +1,5 @@
 <?php 
+session_start();
 $rol="";
 $sexo="";
 if($_POST){
@@ -21,9 +22,17 @@ if($_POST){
                             if($conesp>=1){
                                 if(strlen($_POST['contra'])>=8){
                                     if ($fecha_actual > $fecha_recibida) {
-                                        move_uploaded_file($_FILES['foto']['tmp_name'],$_FILES['foto']['name']);
+                                        $imagen= $_FILES['foto']['name'];
+                                        move_uploaded_file($_FILES['foto']['tmp_name'],"imagenes/".$imagen);
+                                        $_SESSION['usuario']=$_POST['usuario'];
+                                        $_SESSION['imagen']=$imagen;
+                                        $_SESSION['rol']=$rol;
+                                        $_SESSION['correo']=$_POST['correo'];
+                                        $_SESSION['nombre']=$_POST['nombre'];
+                                        $_SESSION['sexo']=$sexo;
+                                        $_SESSION['nacim']=$_POST['fecha'];
                                         echo '<script language="javascript">alert("Usuario registrado en la base de datos.");</script>';
-                                        header("location:login.php");
+                                        header("location:index.php");
                                     }
                                     else{
                                         echo '<script language="javascript">alert("La fecha de nacimiento necesita ser antes de la actual. Por favor, ingrese una correcta.");</script>';
@@ -90,12 +99,12 @@ if($_POST){
                     Registro
                 </div>
                 <div class="card-body">
-                <form action="registro.php" method="post" enctype="multipart/form-data">
+                <form method="post" action="registro.php" id="registro" enctype="multipart/form-data">
                 Correo electrónico:<input type="text" required class="form-control" name="correo" id="">
          <br/>
                 Nombre de usuario:<input type="text" required class="form-control" name="usuario" id="">
          <br/>
-            Contraseña:<input type="text" required class="form-control" name="contra" id="">
+            Contraseña:<input type="password" required class="form-control" name="contra" id="">
         <br/>
         Nombre completo:<input type="text" required class="form-control" name="nombre" id="">
          <br/>
@@ -105,22 +114,22 @@ if($_POST){
          <br/>
          Rol:
          <select name="rol" id="">
-            <option value="administrador"<?php echo ($rol=="administrador")?"selected":"";?>>Admin.</option>
-            <option value="vendedor"<?php echo ($rol=="vendedor")?"selected":"";?>>Vendedor</option>
-            <option value="cliente"<?php echo ($rol=="cliente")?"selected":"";?>>Cliente</option>
+            <option value="Administrador"<?php echo ($rol=="Administrador")?"selected":"";?>>Admin.</option>
+            <option value="Vendedor"<?php echo ($rol=="Vendedor")?"selected":"";?>>Vendedor</option>
+            <option value="Cliente"<?php echo ($rol=="Cliente")?"selected":"";?>>Cliente</option>
          </select>
          Sexo:
          <select name="sexo" id="">
-            <option value="masculino"<?php echo ($sexo=="masculino")?"selected":"";?>>Masculino</option>
-            <option value="femenino"<?php echo ($sexo=="femenino")?"selected":"";?>>Femenino</option>
-            <option value="nobinario"<?php echo ($sexo=="nobinario")?"selected":"";?>>No Binario</option>
+            <option value="Masculino"<?php echo ($sexo=="Masculino")?"selected":"";?>>Masculino</option>
+            <option value="Femenino"<?php echo ($sexo=="Femenino")?"selected":"";?>>Femenino</option>
+            <option value="No Binario"<?php echo ($sexo=="No Binario")?"selected":"";?>>No Binario</option>
          </select>
          <br/>
          <br/>
          Foto de perfil:<input type="file" name="foto" id="">
          <br/>
          <br/>
-           <button class="btn btn-success" type="submit">Entrar</button>
+           <button class="btn btn-success" type="submit">Registrarme</button>
            </form>
            <br/>
            <a href="./login.php"><button type="submit" class="btn btn-outline-primary">Ya tengo cuenta</button></a>
